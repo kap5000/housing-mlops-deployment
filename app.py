@@ -4,11 +4,11 @@ import pandas as pd
 
 model = joblib.load('model.pkl')
 
-def predict_price(square_feet, num_rooms):
-	data = pd.DataFrame({'square_feet': [square_feet], 'num_rooms': [num_rooms]})
+def predict_price(area, bedrooms, bathrooms):
+	data = pd.DataFrame({'area': [area], 'bedrooms': [bedrooms], 'bathrooms': [bathrooms]})
 	prediction = model.predict(data)
 	return prediction[0]
 
-demo = gr.Interface(fn=predict_price, inputs=["number", "number"], outputs="number", title="House Price Predictor")
+demo = gr.Interface(fn=predict_price, inputs=["number", "number", "number"], outputs="number", title="House Price Predictor")
 if __name__ == "__main__":
 	demo.launch()
