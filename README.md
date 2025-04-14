@@ -5,7 +5,7 @@ This repository contains a deployment workflow for predicting housing prices bas
 ## Repository Contents
 - `Housing.csv`: The dataset used for training the model.
 - `model.pkl`: A pre-trained model used for making predictions.
-- `app.py`: A script which provides a web interface for predictins using Gradio.
+- `app.py`: A script which provides a web interface for predictions using Gradio.
 
 ## Usage Instructions
 To run this project, you will need Python installed on your local machine. Follow these steps:
